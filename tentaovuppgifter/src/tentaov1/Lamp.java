@@ -1,14 +1,30 @@
 package tentaov1;
-import java.util.ArrayList;
 
 public class Lamp {
-	
-	private String LampType;
-	private int ModelNumber;
-	private ArrayList<Lamp> LampList = new ArrayList<Lamp>();
+	String LampName;
+	String Brightness;
+	String PowerConsumption;
+	int LampPrice;
 
 	public Lamp(String PowerConsumption, String Brightness, String LampName){
-		
+       this.LampName = LampName;
+       this.Brightness = Brightness;
+       this.PowerConsumption = Brightness;
 	}
 	
+	public String getLampName() {
+		return LampName;
+	}
+	public String getLampBrightness() {
+		return Brightness;
+	}
+	public String getLampPowerConsumption() {
+		return PowerConsumption;
+	}
+	public int getLampPrice() {
+		return LampPrice;
+	}
+	public  void print() {
+		System.out.println("There is a lamp named " + getLampName() + ". It has a power consumption of " + getLampPowerConsumption() + "and its brightness level is " + getLampBrightness() + ".");
+	}
 }
